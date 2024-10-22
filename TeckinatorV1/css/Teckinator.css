@@ -1,0 +1,195 @@
+body {
+  padding-top: 3em;
+  max-width: 40em;
+  margin: auto;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: #333333;
+  background-color: #F5F5F5;
+}
+
+header {
+  background-color: #1F3A6B; /* Azul oscuro inspirado en el logo */
+  color: white;
+  padding: 1em 0;
+  font-size: 1.5em;
+  text-shadow: 1px 1px 2px #000;
+  border-radius: 10px;
+}
+
+main {
+  background-color: white;
+  padding: 2em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.contenedorPregunta {
+  padding-top: 1em;
+  padding-bottom: 3em;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  margin-bottom: 1em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #1F3A6B; /* Azul oscuro para el borde al hacer focus */
+  outline: none;
+}
+
+.boton {
+  width: 45%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #1F3A6B; /* Azul oscuro para los botones */
+  color: white;
+  float: left;
+  text-decoration: none;
+  font-size: 1em;
+  border-radius: 25px;
+  margin: 0.5em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton:hover {
+  background-color: #3A5F9B; /* Un azul un poco más claro al hacer hover */
+  transform: translateY(-3px);
+}
+
+button {
+  width: 100%;
+  height: 50px;
+  background-color: #1F3A6B; /* Azul oscuro para el botón */
+  color: white;
+  font-size: 1em;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  margin-top: 1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #3A5F9B;
+  transform: translateY(-3px);
+}
+
+.limpiar {
+  clear: both;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #3A5F9B; /* Azul intermedio */
+  color: white;
+  font-size: 0.9em;
+  border-radius: 10px;
+  margin-top: 2em;
+}
+
+footer a {
+  text-decoration: none;
+  color: white; /* Color blanco para el enlace */
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #1F3A6B; /* Azul oscuro para el fondo del enlace */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+footer a:hover {
+  background-color: #5C7DC3; /* Azul más claro al hacer hover */
+  transform: translateY(-2px); /* Pequeño movimiento hacia arriba */
+}
+
+/* Subtítulo debajo del encabezado */
+header p {
+  font-size: 1em;
+  margin: 0.5em 0;
+  color: #FFFFFF; /* Manteniendo el texto blanco en el encabezado */
+}
+
+/* Sección principal (dentro de main) */
+main section {
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 1.5em;
+}
+
+/* Estilos para la visualización de errores */
+.error {
+  color: red;
+  font-size: 1.2em;
+  margin-top: 1em;
+}
+
+/* Alineación de las respuestas */
+.contenedorRespuestas {
+  display: flex;
+  justify-content: space-around; /* Alineación centrada de los botones */
+  margin-top: 1em;
+}
+
+/* Mejor estructura para contenedores de pregunta */
+.contenedorPregunta h2 {
+  margin: 0; /* Eliminando márgenes en las preguntas */
+}
+
+/* Footer */
+footer {
+  background-color: #3A5F9B; /* Manteniendo el color azul intermedio */
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 2em;
+}
+
+/* Botón en el footer */
+footer a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #1F3A6B; /* Azul oscuro */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+footer a:hover {
+  background-color: #5C7DC3;
+  transform: translateY(-2px); /* Efecto hover */
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+  .boton {
+    width: 90%; /* Adaptación del botón a pantallas pequeñas */
+    float: none;
+    margin: 0.5em auto;
+  }
+
+  .contenedorRespuestas {
+    flex-direction: column; /* Botones en columna para pantallas pequeñas */
+    align-items: center;
+  }
+
+  button {
+    width: 90%; /* Ajuste para botones en pantallas pequeñas */
+  }
+}

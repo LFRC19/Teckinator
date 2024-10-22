@@ -1,0 +1,54 @@
+CREATE TABLE `maestros` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+CREATE TABLE `caracteristicas` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `descripcion` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+CREATE TABLE `maestro_caracteristica` (
+  `maestro_id` INT NOT NULL,
+  `caracteristica_id` INT NOT NULL,
+  PRIMARY KEY (`maestro_id`, `caracteristica_id`),
+  FOREIGN KEY (`maestro_id`) REFERENCES `maestros`(`id`) ON DELETE CASCADE,
+  FOREIGN KEY (`caracteristica_id`) REFERENCES `caracteristicas`(`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
+INSERT INTO `maestros` (`nombre`) VALUES
+('Maestro 1'),
+('Maestro 2'),
+('Maestro 3');
+
+
+INSERT INTO `caracteristicas` (`descripcion`) VALUES
+('Enseña Matemáticas'),
+('Es estricto'),
+('Usa gafas'),
+('Enseña Historia'),
+('Es amigable'),
+('Tiene barba');
+
+
+-- Asociar Maestro 1 con sus características
+INSERT INTO `maestro_caracteristica` (`maestro_id`, `caracteristica_id`) VALUES
+(1, 1), -- Enseña Matemáticas
+(1, 2), -- Es estricto
+(1, 3); -- Usa gafas
+
+-- Asociar Maestro 2 con sus características
+INSERT INTO `maestro_caracteristica` (`maestro_id`, `caracteristica_id`) VALUES
+(2, 4), -- Enseña Historia
+(2, 5); -- Es amigable
+
+-- Asociar Maestro 3 con sus características
+INSERT INTO `maestro_caracteristica` (`maestro_id`, `caracteristica_id`) VALUES
+(3, 1), -- Enseña Matemáticas
+(3, 5), -- Es amigable
+(3, 6); -- Tiene barba
+

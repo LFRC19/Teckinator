@@ -1,0 +1,59 @@
+Plantilla de Inserción de un Nuevo Maestro y sus Características
+Paso 1: Insertar el Nuevo Maestro
+sql
+INSERT INTO `maestros` (`nombre`) VALUES
+('NOMBRE_DEL_MAESTRO');
+Reemplaza NOMBRE_DEL_MAESTRO con el nombre real del maestro.
+Paso 2: Insertar Nuevas Características (si es necesario)
+Si las características del maestro no existen en la tabla caracteristicas, debes agregarlas.
+
+sql
+INSERT INTO `caracteristicas` (`descripcion`) VALUES
+('CARACTERISTICA_1'),
+('CARACTERISTICA_2'),
+('CARACTERISTICA_3');
+Reemplaza CARACTERISTICA_1, CARACTERISTICA_2, etc., con las características del maestro.
+Paso 3: Obtener los IDs de las Características
+Necesitas saber los IDs de las características para asociarlas con el maestro. Puedes obtenerlos con la siguiente consulta:
+
+sql
+SELECT `id` FROM `caracteristicas` WHERE `descripcion` IN ('CARACTERISTICA_1', 'CARACTERISTICA_2', 'CARACTERISTICA_3');
+Anota los IDs resultantes.
+
+Paso 4: Asociar el Maestro con las Características
+Supongamos que el ID del maestro insertado es MAESTRO_ID y los IDs de las características son CARACTERISTICA_ID_1, CARACTERISTICA_ID_2, etc.
+
+sql
+INSERT INTO `maestro_caracteristica` (`maestro_id`, `caracteristica_id`) VALUES
+(MAESTRO_ID, CARACTERISTICA_ID_1),
+(MAESTRO_ID, CARACTERISTICA_ID_2),
+(MAESTRO_ID, CARACTERISTICA_ID_3);
+Reemplaza MAESTRO_ID con el ID real del maestro.
+Reemplaza CARACTERISTICA_ID_1, CARACTERISTICA_ID_2, etc., con los IDs de las características.
+Ejemplo Práctico
+Imagina que quieres insertar al Profesor Daniel Muñoz con las siguientes características:
+
+Enseña Programación
+Es experto en Inteligencia Artificial
+Es muy innovador
+Paso 1: Insertar el Nuevo Maestro
+sql
+Copiar código
+INSERT INTO `maestros` (`nombre`) VALUES
+('Profesor Daniel Muñoz');
+Anota el ID asignado al maestro (por ejemplo, 17).
+
+Paso 2: Insertar Nuevas Características
+sql
+INSERT INTO `caracteristicas` (`descripcion`) VALUES
+('Enseña Programación'),
+('Es experto en Inteligencia Artificial'),
+('Es muy innovador');
+Anota los IDs asignados a las características (por ejemplo, 31, 32, 33).
+
+Paso 3: Asociar el Maestro con las Características
+sql
+INSERT INTO `maestro_caracteristica` (`maestro_id`, `caracteristica_id`) VALUES
+(17, 31), -- Enseña Programación
+(17, 32), -- Es experto en Inteligencia Artificial
+(17, 33); -- Es muy innovador
