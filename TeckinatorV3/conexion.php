@@ -1,20 +1,21 @@
 <?php
 
-$mysql_host = 'localhost';
-$mysql_usuario = 'root';
+$mysql_host='localhost';
+$mysql_usuario='root';
 /*Sin contraseña*/
-$mysql_passwd = '';
-$mysql_bd = 'teckinatorv3';
+$mysql_passwd='';
+$mysql_bd='teckinatorv2';
 
-$enlace = mysqli_connect($mysql_host, $mysql_usuario, $mysql_passwd, $mysql_bd);
+$enlace=mysqli_connect($mysql_host,$mysql_usuario,$mysql_passwd,$mysql_bd);
 
-/* Comprobar la conexión */
-if (mysqli_connect_errno()) {
-    printf("Fallo la conexión: %s\n", mysqli_connect_error());
-    exit();
+/*Comprobar la conexion*/
+if(mysqli_connect_errno()){
+
+  printf("Fallo la conexion %s\n", mysqli_connect_errno());
+  exit();
 }
 
-/* Codificación de caracteres UTF-8 */
-mysqli_set_charset($enlace, 'utf8');
+/*Codificacion de caracteres UTF8*/
+mysqli_set_charset($enlace,'utf8');
 
-?>
+ ?>
