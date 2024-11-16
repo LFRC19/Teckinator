@@ -1,0 +1,17 @@
+{
+  "name": "akinator-bot-master",
+  "version": "1.0.0",
+  "description": "Akinator is a bot bot for the social network VKontakte, guessing a character conceived by the user. Powered by the akinator.com API",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aki-api": "^7.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.1"
+  }
+}

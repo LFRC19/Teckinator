@@ -1,0 +1,95 @@
+Array
+(
+    [Request] => Array
+        (
+            [action] => start
+        )
+
+)
+
+Array
+(
+    [Request] => Array
+        (
+            [action] => answer
+            [answer] => 0
+            [sessionData] => Array
+                (
+                )
+
+        )
+
+)
+
+Array
+(
+    [Request] => Array
+        (
+            [action] => answer
+            [answer] => 1
+        )
+
+)
+
+Array
+(
+    [Request] => Array
+        (
+            [action] => answer
+            [answer] => 1
+        )
+
+)
+
+Array
+(
+    [Request] => Array
+        (
+            [action] => start
+        )
+
+)
+
+Array
+(
+    [Request] => Array
+        (
+            [action] => start
+        )
+
+)
+
+Array
+(
+    [Request] => Array
+        (
+            [action] => start
+        )
+
+)
+
+Array
+(
+    [Start API Response] => 
+)
+
+Array
+(
+    [Request] => 
+)
+
+Array
+(
+    [Start API Response] => 
+)
+
+Array
+(
+    [Start API Response] => 
+)
+
+Array
+(
+    [Start API Response] => 
+)
+
